@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuildProject", "Sources\BuildProject.csproj", "{E2C9771D-149E-428B-A8F6-377F60180B79}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Firefox3.6", "Firefox3.6\Firefox3.6.csproj", "{BDC68D32-1354-445B-B1F8-2737FA9B79D6}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://water11:8080/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Sources\\BuildProject.csproj
+		SccProjectName1 = Sources
+		SccLocalPath1 = Sources
+		SccProjectUniqueName2 = Firefox3.6\\Firefox3.6.csproj
+		SccProjectName2 = Firefox3.6
+		SccLocalPath2 = Firefox3.6
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E2C9771D-149E-428B-A8F6-377F60180B79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2C9771D-149E-428B-A8F6-377F60180B79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDC68D32-1354-445B-B1F8-2737FA9B79D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDC68D32-1354-445B-B1F8-2737FA9B79D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDC68D32-1354-445B-B1F8-2737FA9B79D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDC68D32-1354-445B-B1F8-2737FA9B79D6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

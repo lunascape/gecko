@@ -1,0 +1,19 @@
+override chrome://global/locale/netError.dtd chrome://browser/locale/netError.dtd
+locale browser-region fr jar:fr.jar!/locale/browser-region/
+locale pipnss fr jar:fr.jar!/locale/fr/pipnss/
+override chrome://mozapps/locale/downloads/settingsChange.dtd chrome://browser/locale/downloads/settingsChange.dtd
+locale cookie fr jar:fr.jar!/locale/fr/cookie/
+override chrome://global/locale/appstrings.properties chrome://browser/locale/appstrings.properties
+locale reporter fr jar:fr.jar!/locale/fr/reporter/
+locale necko fr jar:fr.jar!/locale/fr/necko/
+locale global fr jar:fr.jar!/locale/fr/global/
+locale mozapps fr jar:fr.jar!/locale/fr/mozapps/
+locale browser fr jar:fr.jar!/locale/browser/
+locale global-platform fr jar:fr.jar!/locale/fr/global-platform/
+locale pippki fr jar:fr.jar!/locale/fr/pippki/
+locale passwordmgr fr jar:fr.jar!/locale/fr/passwordmgr/
+locale branding fr jar:fr.jar!/locale/branding/
+locale places fr jar:fr.jar!/locale/fr/places/
+locale global-region fr jar:fr.jar!/locale/fr/global-region/
+locale alerts fr jar:fr.jar!/locale/fr/alerts/
+locale autoconfig fr jar:fr.jar!/locale/fr/autoconfig/

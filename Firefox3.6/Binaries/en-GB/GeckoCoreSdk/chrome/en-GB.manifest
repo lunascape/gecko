@@ -1,0 +1,19 @@
+override chrome://global/locale/netError.dtd chrome://browser/locale/netError.dtd
+locale global en-GB jar:en-GB.jar!/locale/en-GB/global/
+locale global-platform en-GB jar:en-GB.jar!/locale/en-GB/global-platform/
+locale browser-region en-GB jar:en-GB.jar!/locale/browser-region/
+override chrome://mozapps/locale/downloads/settingsChange.dtd chrome://browser/locale/downloads/settingsChange.dtd
+override chrome://global/locale/appstrings.properties chrome://browser/locale/appstrings.properties
+locale pipnss en-GB jar:en-GB.jar!/locale/en-GB/pipnss/
+locale places en-GB jar:en-GB.jar!/locale/en-GB/places/
+locale browser en-GB jar:en-GB.jar!/locale/browser/
+locale pippki en-GB jar:en-GB.jar!/locale/en-GB/pippki/
+locale reporter en-GB jar:en-GB.jar!/locale/en-GB/reporter/
+locale passwordmgr en-GB jar:en-GB.jar!/locale/en-GB/passwordmgr/
+locale branding en-GB jar:en-GB.jar!/locale/branding/
+locale cookie en-GB jar:en-GB.jar!/locale/en-GB/cookie/
+locale global-region en-GB jar:en-GB.jar!/locale/en-GB/global-region/
+locale autoconfig en-GB jar:en-GB.jar!/locale/en-GB/autoconfig/
+locale mozapps en-GB jar:en-GB.jar!/locale/en-GB/mozapps/
+locale necko en-GB jar:en-GB.jar!/locale/en-GB/necko/
+locale alerts en-GB jar:en-GB.jar!/locale/en-GB/alerts/

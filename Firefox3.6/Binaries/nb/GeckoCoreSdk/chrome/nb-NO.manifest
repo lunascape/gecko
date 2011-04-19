@@ -1,0 +1,19 @@
+override chrome://global/locale/netError.dtd chrome://browser/locale/netError.dtd
+locale global nb-NO jar:nb-NO.jar!/locale/nb-NO/global/
+locale global-platform nb-NO jar:nb-NO.jar!/locale/nb-NO/global-platform/
+locale browser-region nb-NO jar:nb-NO.jar!/locale/browser-region/
+override chrome://mozapps/locale/downloads/settingsChange.dtd chrome://browser/locale/downloads/settingsChange.dtd
+override chrome://global/locale/appstrings.properties chrome://browser/locale/appstrings.properties
+locale pipnss nb-NO jar:nb-NO.jar!/locale/nb-NO/pipnss/
+locale places nb-NO jar:nb-NO.jar!/locale/nb-NO/places/
+locale browser nb-NO jar:nb-NO.jar!/locale/browser/
+locale pippki nb-NO jar:nb-NO.jar!/locale/nb-NO/pippki/
+locale reporter nb-NO jar:nb-NO.jar!/locale/nb-NO/reporter/
+locale passwordmgr nb-NO jar:nb-NO.jar!/locale/nb-NO/passwordmgr/
+locale branding nb-NO jar:nb-NO.jar!/locale/branding/
+locale cookie nb-NO jar:nb-NO.jar!/locale/nb-NO/cookie/
+locale global-region nb-NO jar:nb-NO.jar!/locale/nb-NO/global-region/
+locale autoconfig nb-NO jar:nb-NO.jar!/locale/nb-NO/autoconfig/
+locale mozapps nb-NO jar:nb-NO.jar!/locale/nb-NO/mozapps/
+locale necko nb-NO jar:nb-NO.jar!/locale/nb-NO/necko/
+locale alerts nb-NO jar:nb-NO.jar!/locale/nb-NO/alerts/
