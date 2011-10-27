@@ -981,7 +981,10 @@ var PlacesUIUtils = {
           }
         }
       }
-      openUILinkIn(aNode.uri, aWhere);
+      //openUILinkIn(aNode.uri, aWhere);
+	var evt = document.createEvent('MessageEvent');
+	evt.initMessageEvent('PlacesOpenNodeInMessageEvent', true, false, aNode.uri, '', '', window);
+	document.dispatchEvent(evt);
     }
   },
 

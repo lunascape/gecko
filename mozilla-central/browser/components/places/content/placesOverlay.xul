@@ -128,12 +128,12 @@
               default="true"
               selectiontype="single"
               selection="link"/>
-    <menuitem id="placesContext_open:newwindow"
+    <!-- <menuitem id="placesContext_open:newwindow"
               command="placesCmd_open:window"
               label="&cmd.open_window.label;"
               accesskey="&cmd.open_window.accesskey;"
               selectiontype="single"
-              selection="link"/>
+              selection="link"/> -->
     <menuitem id="placesContext_open:newtab"
               command="placesCmd_open:tab"
               label="&cmd.open_tab.label;"

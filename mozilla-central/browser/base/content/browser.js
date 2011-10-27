@@ -1241,39 +1241,39 @@ function delayedStartup(isLoadingBlank, mustLoadSidebar) {
 
 #ifdef HAVE_SHELL_SERVICE
   // Perform default browser checking (after window opens).
-  var shell = getShellService();
-  if (shell) {
-    var shouldCheck = shell.shouldCheckDefaultBrowser;
-    var willRecoverSession = false;
-    try {
-      var ss = Cc["@mozilla.org/browser/sessionstartup;1"].
-               getService(Ci.nsISessionStartup);
-      willRecoverSession =
-        (ss.sessionType == Ci.nsISessionStartup.RECOVER_SESSION);
-    }
-    catch (ex) { /* never mind; suppose SessionStore is broken */ }
-    if (shouldCheck && !shell.isDefaultBrowser(true) && !willRecoverSession) {
-      var brandBundle = document.getElementById("bundle_brand");
-      var shellBundle = document.getElementById("bundle_shell");
+//  var shell = getShellService();
+//  if (shell) {
+//    var shouldCheck = shell.shouldCheckDefaultBrowser;
+//    var willRecoverSession = false;
+//    try {
+//      var ss = Cc["@mozilla.org/browser/sessionstartup;1"].
+//               getService(Ci.nsISessionStartup);
+//      willRecoverSession =
+//        (ss.sessionType == Ci.nsISessionStartup.RECOVER_SESSION);
+//    }
+//    catch (ex) { /* never mind; suppose SessionStore is broken */ }
+//    if (shouldCheck && !shell.isDefaultBrowser(true) && !willRecoverSession) {
+//      var brandBundle = document.getElementById("bundle_brand");
+//      var shellBundle = document.getElementById("bundle_shell");
 
-      var brandShortName = brandBundle.getString("brandShortName");
-      var promptTitle = shellBundle.getString("setDefaultBrowserTitle");
-      var promptMessage = shellBundle.getFormattedString("setDefaultBrowserMessage",
-                                                         [brandShortName]);
-      var checkboxLabel = shellBundle.getFormattedString("setDefaultBrowserDontAsk",
-                                                         [brandShortName]);
-      const IPS = Components.interfaces.nsIPromptService;
-      var ps = Components.classes["@mozilla.org/embedcomp/prompt-service;1"]
-                                                .getService(IPS);
-      var checkEveryTime = { value: shouldCheck };
-      var rv = ps.confirmEx(window, promptTitle, promptMessage,
-                            IPS.STD_YES_NO_BUTTONS,
-                            null, null, null, checkboxLabel, checkEveryTime);
-      if (rv == 0)
-        shell.setDefaultBrowser(true, false);
-      shell.shouldCheckDefaultBrowser = checkEveryTime.value;
-    }
-  }
+//      var brandShortName = brandBundle.getString("brandShortName");
+//      var promptTitle = shellBundle.getString("setDefaultBrowserTitle");
+//      var promptMessage = shellBundle.getFormattedString("setDefaultBrowserMessage",
+//                                                         [brandShortName]);
+//      var checkboxLabel = shellBundle.getFormattedString("setDefaultBrowserDontAsk",
+//                                                         [brandShortName]);
+//      const IPS = Components.interfaces.nsIPromptService;
+//      var ps = Components.classes["@mozilla.org/embedcomp/prompt-service;1"]
+//                                                .getService(IPS);
+//      var checkEveryTime = { value: shouldCheck };
+//      var rv = ps.confirmEx(window, promptTitle, promptMessage,
+//                            IPS.STD_YES_NO_BUTTONS,
+//                            null, null, null, checkboxLabel, checkEveryTime);
+//      if (rv == 0)
+//        shell.setDefaultBrowser(true, false);
+//      shell.shouldCheckDefaultBrowser = checkEveryTime.value;
+//    }
+//  }
 #endif
 
   // BiDi UI

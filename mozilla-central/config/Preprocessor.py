@@ -142,9 +142,9 @@ class Preprocessor:
       self.writtenLines += 1
       ln = self.context['LINE']
       if self.writtenLines != ln:
-        self.out.write('//@line %(line)d "%(file)s"%(le)s'%{'line': ln,
-                                                            'file': self.context['FILE'],
-                                                            'le': self.LE})
+        #self.out.write('//@line %(line)d "%(file)s"%(le)s'%{'line': ln,
+        #                                                    'file': self.context['FILE'],
+        #                                                    'le': self.LE})
         self.writtenLines = ln
     for f in self.filters:
       aLine = f[1](aLine)

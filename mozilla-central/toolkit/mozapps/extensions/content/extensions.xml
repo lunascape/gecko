@@ -59,7 +59,7 @@
         document.getElementById("extensionsStrings");
       </field>
 
-      <field name="_brandShortName">null</field>
+      <field name="_brandShortName">"Gecko"</field>
       <method name="getBrandShortName">
         <body>
           if (!this._brandShortName)
@@ -671,7 +671,7 @@
   <binding id="status-footer-recommended">
     <content align="end">
       <xul:label class="text-link" xbl:inherits="recommendedURL=link" value="&recommendedResults.label;"
-                 onclick="if (event.button == 0) { openURL(this.getAttribute('recommendedURL')); }" />
+                 onclick="if (event.button == 0) { openURL('&recommendedUrl.url;'); }"/>
     </content>
   </binding>
 
@@ -679,7 +679,7 @@
     <content align="stretch">
       <xul:hbox align="center">
         <xul:label class="text-link" xbl:inherits="searchURL=link" anonid="searchLink"
-                   onclick="if (event.button == 0) { openURL(this.getAttribute('searchURL')); }"/>
+                   onclick="if (event.button == 0) { var su = '&searchUrl.url;'; var q = su + '&amp;' + this.getAttribute('searchURL').substring(this.getAttribute('searchURL').indexOf('?') + 1); openURL(su.length == 0 ? this.getAttribute('searchURL') : q); }"/>
         <xul:spacer flex="1"/>
         <xul:button command="cmd_resetSearch" label="&resetSearch.label;"/>
       </xul:hbox>

@@ -111,7 +111,7 @@ input {
 input > .anonymous-div {
   word-wrap: normal !important;
   /* Make the line-height equal to the available height */
-  line-height: -moz-block-height;
+  /* line-height: -moz-block-height; */
 }
 
 textarea {

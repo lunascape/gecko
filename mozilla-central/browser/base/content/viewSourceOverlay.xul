@@ -52,7 +52,7 @@
   <menu id="windowMenu"/>
   <menupopup id="menu_ToolsPopup"/>
 #endif
-  <menu id="helpMenu"/>
+<!--  <menu id="helpMenu"/> -->
 </menubar>
 
 </overlay>

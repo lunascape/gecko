@@ -152,14 +152,14 @@
           }
 
           switch (event.keyCode) {
-            case event.DOM_VK_TAB:
+            /* case event.DOM_VK_TAB:
               if (event.ctrlKey && !event.altKey && !event.metaKey)
                 if (this.tabs && this.handleCtrlTab) {
                   this.tabs.advanceSelectedTab(event.shiftKey ? -1 : 1, true);
                   event.stopPropagation();
                   event.preventDefault();
                 }
-              break;
+              break; */
             case event.DOM_VK_PAGE_UP:
               if (event.ctrlKey && !event.shiftKey && !event.altKey && !event.metaKey)
                 if (this.tabs && this.handleCtrlPageUpDown) {

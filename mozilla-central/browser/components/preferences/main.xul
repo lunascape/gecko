@@ -102,7 +102,7 @@
     <groupbox id="startupGroup">
       <caption label="&startup.label;"/>
 
-      <hbox align="center">
+<!--      <hbox align="center">
         <label value="&startupPage.label;" accesskey="&startupPage.accesskey;"
                control="browserStartupPage"/>
         <menulist id="browserStartupPage" preference="browser.startup.page">
@@ -113,7 +113,8 @@
           </menupopup>
         </menulist>
       </hbox>
-      <separator class="thin"/>
+      <separator class="thin"/> -->
+
       <hbox align="center">
         <label value="&location.label;" accesskey="&location.accesskey;" control="browserHomePage"/>
         <textbox id="browserHomePage" class="padded uri-element" flex="1"
@@ -127,14 +128,14 @@
                 oncommand="gMainPane.setHomePageToCurrent();"
                 id="useCurrent"
                 preference="pref.browser.homepage.disable_button.current_page"/>
-        <button label="&useBookmark.label;" accesskey="&useBookmark.accesskey;"
+<!--        <button label="&useBookmark.label;" accesskey="&useBookmark.accesskey;"
                 oncommand="gMainPane.setHomePageToBookmark();"
                 id="useBookmark"
-                preference="pref.browser.homepage.disable_button.bookmark_page"/>
-        <button label="&restoreDefault.label;" accesskey="&restoreDefault.accesskey;"
+                preference="pref.browser.homepage.disable_button.bookmark_page"/>  -->
+<!--        <button label="&restoreDefault.label;" accesskey="&restoreDefault.accesskey;"
                 oncommand="gMainPane.restoreDefaultHomePage();"
                 id="restoreDefaultHomePage"
-                preference="pref.browser.homepage.disable_button.restore_default"/>
+                preference="pref.browser.homepage.disable_button.restore_default"/>  -->
       </hbox>
     </groupbox>
 

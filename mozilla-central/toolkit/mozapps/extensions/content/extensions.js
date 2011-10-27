@@ -1281,6 +1281,10 @@ function Startup()
         installMsg = installMsg.replace("%S", gNewAddons.length);
         showMessage(URI_NOTIFICATION_ICON_INFO,
                     installMsg, null, null, true, null);
+
+	window.focus();
+	window.setTimeout(function () {window.focus();}, 5000);
+
         var extensionCount = 0;
         var themeCount = 0;
         var localeCount = 0;
@@ -2298,6 +2302,9 @@ function enableRestartButton() {
     addonsMsg.appendNotification(message, "restart-app",
                                  URI_NOTIFICATION_ICON_INFO,
                                  addonsMsg.PRIORITY_WARNING_HIGH, buttons);
+    var os = Components.classes["@mozilla.org/observer-service;1"].getService(Components.interfaces.nsIObserverService);
+    var b = Components.classes["@mozilla.org/supports-PRBool;1"].createInstance(Components.interfaces.nsISupportsPRBool);
+    os.notifyObservers(b, "luna-gecko-addon-restart-requested", message);
   }
 }
 

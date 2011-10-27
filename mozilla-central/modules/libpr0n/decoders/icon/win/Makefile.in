@@ -42,6 +42,8 @@ VPATH		= @srcdir@
 
 include $(DEPTH)/config/autoconf.mk
 
+MOZ_OPTIMIZE_FLAGS = -O1 -GLT -arch:SSE2
+
 MODULE		= imgicon
 LIBRARY_NAME	= imgiconwin_s
 LIBXUL_LIBRARY = 1

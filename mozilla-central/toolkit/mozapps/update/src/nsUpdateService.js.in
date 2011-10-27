@@ -573,6 +573,16 @@ function getLocale() {
   if (gLocale)
     return gLocale;
 
+  gLocale = "en-US";
+
+  try {
+    gLocale = getDefaultPrefBranch().getCharPref("general.useragent.locale");
+  } catch (e) {
+    // use default when pref not found
+  }
+
+  return gLocale;
+
   var localeFile = FileUtils.getFile(KEY_APPDIR, [FILE_UPDATE_LOCALE]);
   if (!localeFile.exists())
     localeFile = FileUtils.getFile(KEY_GRED, [FILE_UPDATE_LOCALE]);

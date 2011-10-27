@@ -117,3 +117,10 @@ function switchPage(aEvent)
   modes.setAttribute("selectedIndex", gSelectedPage);
 }
 
+function navigateInTab(uri)
+{
+	var wm = Components.classes["@mozilla.org/appshell/window-mediator;1"].getService(Components.interfaces.nsIWindowMediator);
+	var mainWindow = wm.getMostRecentWindow("navigator:browser");
+	mainWindow.getBrowser().addTab(uri); 
+}
+

@@ -73,7 +73,7 @@
                   ondrop="this.parentNode.parentNode._onDrop(event);">
           <xul:hbox class="tab-drop-indicator" mousethrough="always"/>
         </xul:hbox>
-        <xul:hbox class="tabbrowser-strip" collapsed="true" tooltip="_child" context="_child"
+        <xul:hbox class="tabbrowser-strip" style="visibility:collapse;" collapsed="true" tooltip="_child" context="_child"
                   anonid="strip"
                   ondragstart="this.parentNode.parentNode._onDragStart(event);"
                   ondragover="this.parentNode.parentNode._onDragOver(event);"

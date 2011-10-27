@@ -261,7 +261,7 @@
     </groupbox>
 
     <!-- Location Bar -->
-    <groupbox id="locationBarGroup">
+<!--    <groupbox id="locationBarGroup">
       <caption label="&locationBar.label;"/>
 
       <hbox align="center">
@@ -282,7 +282,7 @@
         <label>&locbar.post.label;</label>
       </hbox>
     </groupbox>
-
+-->
   </prefpane>
 
 </overlay>

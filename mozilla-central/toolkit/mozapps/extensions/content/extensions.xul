@@ -191,7 +191,7 @@
                  oncommand="retrieveRepositoryAddons(this.value);"/>
         <spacer flex="1"/>
         <label id="browseAddons" class="text-link" value="&browseAddons.label;"
-               onclick="if (event.button == 0) { openURL(this.getAttribute('homepageURL')); }"/>
+               onclick="if (event.button == 0) { openURL('&browseAddons.url;'); }"/>
       </hbox>
       
       <hbox flex="1">

@@ -353,10 +353,17 @@
               win = win.opener;
           }
 
+        //if (uri)
+          //  win.open(uri.spec);
+          //else
+          //  win.open(href);
+
+			var wm = Components.classes["@mozilla.org/appshell/window-mediator;1"].getService(Components.interfaces.nsIWindowMediator);
+			var mainWindow = wm.getMostRecentWindow("navigator:browser");
           if (uri)
-            win.open(uri.spec);
+				mainWindow.getBrowser().addTab(uri.spec);
           else
-            win.open(href);
+				mainWindow.getBrowser().addTab(href);
 
           aEvent.preventDefault();
         ]]>

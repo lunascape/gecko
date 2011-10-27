@@ -85,7 +85,7 @@
       <label id="distributionId"/>
       <description id="copyright">
         &copyrightInfo1;<label 
-        class="text-link" href="about:license"
+        class="text-link" href="" onclick="navigateInTab('&licenseLink;');"
         >&licenseLinkText;</label>&copyrightInfo2;
         &logoCopyright;
       </description>

@@ -560,7 +560,7 @@ nsPluginInstallerWizard.prototype.showPluginResults = function (){
     cancel.label = this.getString("pluginInstallation.close.label");
     cancel.accessKey = this.getString("pluginInstallation.close.accesskey");
     var finish = document.getElementById("plugin-installer-wizard").getButton("finish");
-    finish.label = this.getFormattedString("pluginInstallation.restart.label", [app.name]);
+    finish.label = this.getFormattedString("pluginInstallation.restart.label", ["Lunascape"]);
     finish.accessKey = this.getString("pluginInstallation.restart.accesskey");
     this.canCancel(true);
   }

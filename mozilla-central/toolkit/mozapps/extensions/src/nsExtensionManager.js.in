@@ -246,7 +246,7 @@ var BundleManager = {
     return sbs.createBundle(bundleURI);
   },
 
-  _appName: "",
+  _appName: "Gecko",
 
   /**
    * The Application's display name.

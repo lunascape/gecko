@@ -3907,7 +3907,7 @@ PRBool nsWindow::ProcessMessage(UINT msg, WPARAM &wParam, LPARAM &lParam,
         obsServ->NotifyObservers(nsnull, "profile-change-teardown", context.get());
         obsServ->NotifyObservers(nsnull, "profile-before-change", context.get());
         // Then a controlled but very quick exit.
-        _exit(0);
+       // _exit(0);
       }
       sCanQuit = TRI_UNKNOWN;
       result = PR_TRUE;

@@ -95,6 +95,8 @@
 
 #include "nsWebShellWindow.h" // get rid of this one, too...
 
+#include "nsIWebNavigation.h"
+
 #define SIZEMODE_NORMAL     NS_LITERAL_STRING("normal")
 #define SIZEMODE_MAXIMIZED  NS_LITERAL_STRING("maximized")
 #define SIZEMODE_MINIMIZED  NS_LITERAL_STRING("minimized")
@@ -1012,7 +1014,31 @@ void nsXULWindow::OnChromeLoaded()
     if (!parentWindow)
       positionSet = PR_FALSE;
 #endif
-    if (positionSet)
+
+	bool bIsBrowserXUL = false;
+	nsCOMPtr<nsIWebNavigation> webNav(do_GetInterface(mDocShell));
+	if ( webNav != nsnull )
+	{
+		nsCOMPtr<nsIURI> currentURI;
+		webNav->GetCurrentURI(getter_AddRefs(currentURI));
+		if ( currentURI != nsnull )
+		{
+			nsCString documentURI;
+			nsresult rv = currentURI->GetSpec(documentURI);
+			if ( NS_SUCCEEDED(rv) )
+			{
+				// /browser.xul
+				nsCString right;
+				long length = documentURI.Right(right, 12);
+				if ( length >= 12 && right.EqualsASCII("/browser.xul") )
+				{
+					bIsBrowserXUL = true;
+				}
+			}
+		}
+	}
+
+    if (positionSet && !bIsBrowserXUL)
       positionSet = LoadPositionFromXUL();
     LoadMiscPersistentAttributesFromXUL();
 

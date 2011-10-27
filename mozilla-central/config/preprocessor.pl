@@ -130,7 +130,7 @@ sub include {
             my $linein = $stack->{'variables'}->{'LINE'};
             if (++$lineout != $linein) {
                 if ($filename =~ /\.js(|\.in)$/o) {
-                    $stack->print("//\@line $linein \"$filename\"\n")
+                    #$stack->print("//\@line $linein \"$filename\"\n")
                 }
                 $lineout = $linein;
             }

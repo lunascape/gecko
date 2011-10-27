@@ -52,7 +52,9 @@
 ]>
 
 <overlay id="AdvancedPaneOverlay"
-         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+         xmlns:html="http://www.w3.org/1999/xhtml"
+>
 
   <prefpane id="paneAdvanced" onpaneload="gAdvancedPane.init();">
 
@@ -186,7 +188,7 @@
 
 #ifdef HAVE_SHELL_SERVICE
           <!-- System Defaults -->
-          <groupbox id="systemDefaultsGroup" orient="vertical">
+<!--          <groupbox id="systemDefaultsGroup" orient="horizontal">
             <caption label="&systemDefaults.label;"/>
 
             <hbox id="checkDefaultBox" align="center" flex="1">      
@@ -203,8 +205,12 @@
                       oncommand="gAdvancedPane.updateSubmitCrashes();"
                       label="&submitCrashes.label;" accesskey="&submitCrashes.accesskey;"/>
 #endif
-          </groupbox>
+          </groupbox> -->
 #endif
+		  <groupbox orient="horizontal">
+              <caption label="&aboutConfig.groupCaption;"/>
+              <description><html:a class="inline-link" href="#" onclick="var wm = Components.classes['@mozilla.org/appshell/window-mediator;1'].getService(Components.interfaces.nsIWindowMediator);var mainWindow = wm.getMostRecentWindow('navigator:browser');mainWindow.getBrowser().addTab('about:config'); return false;">&aboutConfig.linkName;</html:a></description>
+          </groupbox>
         </tabpanel>
 
         <!-- Network -->
@@ -285,10 +291,10 @@
                       label="&enableAddonsUpdate2.label;"
                       accesskey="&enableAddonsUpdate2.accesskey;"
                       preference="extensions.update.enabled"/>
-            <checkbox id="enableSearchUpdate"
+           <!-- <checkbox id="enableSearchUpdate"
                       label="&enableSearchUpdate.label;"
                       accesskey="&enableSearchUpdate.accesskey;"
-                      preference="browser.search.update"/>
+                      preference="browser.search.update"/> -->
           </vbox>
 
 #ifdef MOZ_UPDATER
