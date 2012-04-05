@@ -8125,19 +8125,32 @@ nsDocShell::GetInheritedPrincipal(PRBool aConsiderCurrentDocument)
     }
 
     //-- Get the document's principal
+	//BEGIN - modified by Lunascape
     if (document) {
         nsIPrincipal *docPrincipal = document->NodePrincipal();
 
+		// Get the script security manager interface service. (Lunascape Added)
+		nsIScriptSecurityManager *sSecurityManager;
+		nsresult rvService = CallGetService(NS_SCRIPTSECURITYMANAGER_CONTRACTID,
+                               &sSecurityManager);
+
+		// Is document system principal? (Lunascape Added)
+		PRBool isSystem;
+		nsresult rvIsSystem = sSecurityManager->IsSystemPrincipal(docPrincipal, &isSystem);
+		PRBool bIsSystemPrincipal = NS_SUCCEEDED(rvIsSystem) && isSystem;
+
         // Don't allow loads in typeContent docShells to inherit the system
-        // principal from existing documents.
+        // principal from existing documents. 
+		// (Lunascape changed the static function to the "bIsSystemPrincipal".)
         if (inheritedFromCurrent &&
             mItemType == typeContent &&
-            nsContentUtils::IsSystemPrincipal(docPrincipal)) {
+            bIsSystemPrincipal) {
             return nsnull;
         }
 
         return docPrincipal;
     }
+	//END - modified by Lunascape
 
     return nsnull;
 }
